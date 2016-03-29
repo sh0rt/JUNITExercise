@@ -1,0 +1,19 @@
+INDEX VERSION 1.127+/net/home/f14/cjmeyer/exercise/.metadata/.plugins/org.eclipse.jdt.core
+547987520.index
+28918947.index
+1804852147.index
+3919446418.index
+2999274665.index
+1884095563.index
+2470936067.index
+3954960821.index
+1513237226.index
+2597345471.index
+1842070278.index
+3739799355.index
+2993023892.index
+1569987528.index
+3065789830.index
+3840400425.index
+3659565082.index
+2522867453.index

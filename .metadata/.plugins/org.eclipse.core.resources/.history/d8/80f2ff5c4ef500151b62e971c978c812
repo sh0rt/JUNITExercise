@@ -1,0 +1,43 @@
+package edu.csbsju.ntc;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class NewTelephoneCompanyTest_WBTT {
+
+	private NewTelephoneCompany ntc;
+	
+	@Test
+	public void testComputeCharge() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testGetStartTime() {
+	    int expResult = 0;
+	    int result = ntc.getStartTime();
+	    assertEquals("Hours is " + expResult,expResult, result);
+	}
+
+	@Test
+	public void testSetStartTime() {
+        int expResult = 40;
+        ntc.setStartTime(expResult);
+        int result = ntc.getStartTime();
+        assertEquals("Hours is now " + expResult,expResult, result);
+	}
+
+	@Test
+	public void testGetDuration() {
+        int expResult = 0;
+        int result = ntc.getDuration();
+        assertEquals("Length is" + expResult,expResult, result);
+	}
+
+	@Test
+	public void testSetDuration() {
+		fail("Not yet implemented");
+	}
+
+}

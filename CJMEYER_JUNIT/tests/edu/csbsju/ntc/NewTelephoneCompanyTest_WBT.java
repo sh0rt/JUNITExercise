@@ -1,0 +1,76 @@
+package edu.csbsju.ntc;
+
+import static org.junit.Assert.assertEquals;
+
+import org.junit.Before;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.junit.runners.Suite;
+import org.junit.runners.Suite.SuiteClasses;
+
+@RunWith(Suite.class)
+@SuiteClasses({ NewTelephoneCompanyTest_BBT.class })
+public class NewTelephoneCompanyTest_WBT {
+
+	private NewTelephoneCompany ntc;
+	
+	@Before
+	public void setUp() throws Exception {
+		ntc = new NewTelephoneCompany();
+	}
+
+	@Test
+	public void testGetHours() {
+        int expResult = 0;
+        int result = ntc.getStartTime();
+        assertEquals("Hours is " + expResult,expResult, result);
+	}
+
+	@Test
+	public void testSetHours() {
+        int expResult = 40;
+        ntc.setStartTime(expResult);
+        int result = ntc.getStartTime();
+        assertEquals("Hours is now " + expResult,expResult, result);
+	}
+
+	@Test
+	public void testGetDuration() {
+        int expResult = 0;
+        int result = ntc.getDuration();
+        assertEquals("Length is" + expResult,expResult, result);
+	}
+
+	@Test
+	public void testSetDuration() {
+        int expResult = 40;
+        ntc.setDuration(expResult);
+        int result = ntc.getDuration();
+        assertEquals("Length is now " + expResult,expResult, result);
+	}
+	
+	
+	// Invalid Start Time Tests	
+	@Test(expected=UnsupportedOperationException.class)
+	public void testComputeCharge_InvalidStartTime_Case1() {
+		ntc.setStartTime(-5);
+		ntc.setDuration(10);
+		ntc.computeCharge();
+	}
+	
+	@Test(expected=UnsupportedOperationException.class)
+	public void testComputeCharge_InvalidStartTime_Case2() {
+		ntc.setStartTime(-1);
+		ntc.setDuration(10);
+		ntc.computeCharge();
+	}
+	
+	
+	// Invalid Duration Tests
+	@Test(expected=UnsupportedOperationException.class)
+	public void testComputeCharge_InvalidDuration_Case1() {
+		ntc.setStartTime(1800);
+		ntc.setDuration(0);
+		ntc.computeCharge();
+	}	
+}
